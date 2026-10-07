@@ -1,0 +1,212 @@
+/* Tampilan utama halaman */
+* {
+    margin: 0;
+    /* Menghapus jarak luar bawaan dari semua elemen */
+    padding: 0;
+    /* Menghapus jarak dalam bawaan dari semua elemen */
+    box-sizing: border-box;
+    /* Mengatur perhitungan ukuran elemen agar padding dan border tidak menambah lebar total elemen */
+}
+
+/* style seluruh halaman */
+body {
+    font-family: 'Poppins','Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* jenis huruf bawaan */
+
+    background-color: linear-gradient(135deg, #c2e0ff, #93c6fa, #1f8ffe);
+
+    color: #000000;
+
+    line-height: 1.5;
+    /* ceklagi */
+
+    display: flex;
+    /* Menerapkan tata letak Flexbox pad Body */
+
+    justify-content: center;
+    /* Memposisikan konten utama di tengah layar */
+
+    padding: 20px;
+}
+
+.list-container {
+    background-color: linear-gradient(135deg, #c2e0ff, #ffb3d6);
+    width: 60%;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #153f5b;
+    border-radius: 40px;
+    box-shadow: 5px 5px #ccc;
+}
+
+.part-judul {
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.part-judul h1 {
+  font-size: 26px;    /* Ukuran teks judul */
+  margin-bottom: 5px; /* Jarak luar bawah ke teks nama */
+}
+
+.part-judul span {
+  color: white;
+  font-size: 14px;
+  background: #00237c;
+  padding: 2px 12px;
+  border-radius: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.statistik {
+  display: flex;                  /* Wadah Flexbox */
+  justify-content: space-around;  /* Space item statistik dibagi rata */
+  align-items: center;            /* Posisi vertikal elemen di tengah */
+  background-color: #eef2f5;    /* Warna latar belakang kotak statistik */
+  padding: 15px;                  /* jarak dalam pada seksi statistik */
+  margin: 20px 0;                 /* jarak luar 20px atas-bawah terhadap seksi lain */
+  border: 1px solid #dcdcdc;    /* garis tepi tipis abu-abu */
+  border-radius: 20px;
+}
+
+.angka-statistik {
+  text-align: center; /* Posisi teks di tengah */
+}
+
+.total, .selesai, .nunda-terusss {
+  font-size: 22px;   
+  font-weight: bold;  
+  display: block; /* Memaksa label teks di bawahnya turun ke baris baru */
+}
+
+.total { color: #00237c; }          
+.selesai { color: #06a804; }        
+.nunda-terusss { color: #e74c3c; } 
+
+.label {
+  font-size: 12px; /* Property: font-size | Value: 12px | Peran: Mengatur ukuran huruf label statistik menjadi kecil */
+  color: rgb(72, 73, 73); /* Property: color | Value: gray | Peran: Mengubah warna label menjadi abu-abu */
+}
+
+.statistik hr {
+  height: 30px; /* Tinggi garis tegak pemisah */
+  border: 1px solid #ccc; /* Ketebalan dan warna garis */
+}
+
+.formulir {
+  display: flex; /* area inputan jadi mode flex*/
+  justify-content: space-between;
+  margin-bottom: 10px; /* Jarak konsisten antara input, select, dan tombol */
+  /* margin-bottom: 20px; jarak luar bawah */
+}
+
+#tugas, select, .btnSuccess {
+  padding: 10px; /* biar teks ketikan ga nempel ke tepi box */
+  border: 1px solid #ccc; /* Garis tepi */
+  border-radius: 8px;
+  height: 40px;
+  font-size: 14px;
+}
+
+#tugas {
+  width: 66%; /* Persentase lebar kolom input */
+}
+
+select.formulir {
+  width: 16%; /* Persentase lebar kolom select */
+}
+
+.btnSuccess {
+  background-color: #06a804; /* Warna */
+  width: 15%; /* Persentase lebar button */
+  color: white; /* Warna teks button */
+  border: none; /* Property: border | Value: none | Peran: Menghapus garis tepi bawaan tombol */
+  padding: 10px 15px; /* Jarak dalam, 10px atas-bawah, 15px kiri-kanan */
+  font-weight: bold; /* Cetak tebal */
+  cursor: pointer; /* Kursor jadi bentuk tangan */
+  transition: 0.3s; /* Berubah warna saat disorot */
+}
+
+.list-nya h3 {
+    margin-bottom: 10px;
+}
+.judul-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnList {
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  padding: 1px;
+  align-items: center;
+}
+
+#btnAll, #btnAktif, #btnDone {
+  background-color: #e0e0e0;
+  color: #ccc;
+  border: none; /* Menghapus garis tepi button */
+  border-radius: 8px;
+  padding: 5px; /* Jarak luar ke kanan antar button */
+  cursor: pointer; /* Ngubah kursor mouse jadi tangan */
+}
+
+#btnAll {
+    background: white;
+    color: #00237c;
+    box-shadow: #000000;
+    border-radius: 8px;
+    margin: 0.8px;
+}
+
+/* 16. ELEMENT SELECTOR UNTUK DAFTAR UL & LI */
+/* Nama Sintaks: Element Selector (ul) | Peran: Menghapus simbol bulatan bawaan dan mengatur jarak daftar */
+ul {
+  list-style: none; /* Property: list-style | Value: none | Peran: Menghapus simbol titik hitam (bullet points) bawaan HTML */
+  padding: 0;       /* Property: padding | Value: 0 | Peran: Menghapus jarak dalam bawaan daftar */
+  margin: 15px 0;   /* Property: margin | Value: 15px 0 | Peran: Memberi jarak luar 15px atas-bawah terhadap elemen lain */
+}
+
+/* 17. CLASS SELECTOR BARIS ITEM TUGAS (DINAMIS DARI JS) */
+/* Nama Sintaks: Class Selector (.todo-item) | Peran: Mengatur tata letak tiap baris tugas yang muncul dinamis */
+.todo-item {
+  display: flex;                 /* Property: display | Value: flex | Peran: Menyalakan mode Flexbox pada baris tugas */
+  justify-content: space-between;/* Property: justify-content | Value: space-between | Peran: Memposisikan teks di kiri dan tombol hapus di kanan */
+  align-items: center;           /* Property: align-items | Value: center | Peran: Meratakan posisi vertikal di tengah */
+  padding: 10px;                 /* Property: padding | Value: 10px | Peran: Memberi jarak dalam pada baris tugas */
+  border-bottom: 1px solid #eee; /* Property: border-bottom | Value: 1px solid #eee | Peran: Memberi garis pembatas tipis di bawah setiap tugas */
+}
+
+/* 18. EFEK CORETAAN UNTUK TUGAS SELESAI */
+/* Nama Sintaks: Class Selector (.todo-item.completed .todo-text) | Peran: Mencoret teks jika tugas ditandai selesai */
+.todo-item.completed .todo-text {
+  text-decoration: line-through; /* Property: text-decoration | Value: line-through | Peran: Memberi efek garis dicoret horizontal pada teks */
+  color: gray;                   /* Property: color | Value: gray | Peran: Mengubah warna teks tugas selesai menjadi abu-abu */
+}
+
+/* 19. ID SELECTOR & CLASS EMPTY STATE (FREE TIME) */
+/* Nama Sintaks: Grouping Selector (.list-nya h6, #takde-tugas) | Peran: Mengatur tampilan pesan lucu saat tidak ada tugas */
+.list-nya h6, #takde-tugas {
+  text-align: center; /* Property: text-align | Value: center | Peran: Mengatur posisi teks pesan kosong ke tengah */
+  color: gray;        /* Property: color | Value: gray | Peran: Mengubah warna teks pesan menjadi abu-abu */
+  margin: 5px 0;      /* Property: margin | Value: 5px 0 | Peran: Memberi jarak luar atas-bawah yang tipis */
+}
+
+.list-nya h6 {
+  font-size: 16px;    /* Property: font-size | Value: 16px | Peran: Mengatur ukuran huruf judul "Yeay! FREE TIME" */
+  color: #00237c;     /* Property: color | Value: #2ecc71 | Peran: Memberi warna hijau ceria pada judul free time */
+}
+
+/* 20. CLASS SELECTOR FOOTER AKHIR */
+/* Nama Sintaks: Class Selector (.part-akhir) | Peran: Mengatur garis pemisah dan spasi bagian paling bawah halaman */
+.part-akhir {
+  margin-top: 25px;          /* Property: margin-top | Value: 25px | Peran: Memberi jarak luar dari seksi daftar tugas di atasnya */
+  border-top: 1px solid #ccc;/* Property: border-top | Value: 1px solid #ccc | Peran: Memberi garis lurus di atas footer */
+  padding-top: 10px;         /* Property: padding-top | Value: 10px | Peran: Memberi jarak antara garis dan teks footer */
+  font-size: 12px;           /* Property: font-size | Value: 12px | Peran: Mengatur ukuran huruf footer menjadi kecil */
+  color: gray;               /* Property: color | Value: gray | Peran: Mengubah warna teks footer menjadi abu-abu */
+}

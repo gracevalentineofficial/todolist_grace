@@ -1,0 +1,120 @@
+<!doctype html>
+<!--memberi tahu browser bahwa dokumen menggunakan HTML 5-->
+
+<html lang="id">
+  <!--menyatakan bahasa utama halaman-->
+
+  <head>
+    <!--menyimpan informasi dokumen yang bukan isi halaman-->
+
+    <meta charset="UTF-8" />
+    <!--agar simbol dan huruf unik bisa tampil benar-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--meta untuk memberi metadata (informasi latar belakang dokumen yang tidak ditampilkan di layar)-->
+    <!--name="viewport" untuk menunjukkan tujuan tag meta tadi ke area tampilan pengguna-->
+    <!--content berisi aturan apa saja yang bakal diterapin ke viewport-->
+    <!--device-width berarti ukurannya sesuai device pengguna-->
+    <!--initial-scale berarti level zoom pertama kali web page dibuka-->
+
+    <title>To Do List</title>
+    <!--judul di tab browser-->
+
+    <link rel="stylesheet" href="style.css" />
+    <!--Mengubungkan dengan style.css-->
+  </head>
+
+  <body>
+    <!--menampung isi yang terlihat pada halaman-->
+
+    <div class="list-container">
+      <!--membungkus seluruh aplikasi -->
+
+      <header>
+        <!--bagian kepala aplikasi-->
+
+        <div class="part-judul">
+          <h1>MY TO DO LIST</h1>
+          <span>GRACE VALENTINE</span>
+          <p>Sistem Manajemen Tugas</p>
+        </div>
+      </header>
+
+      <main>
+        <!--main itu menandakan bagian inti aplikasi-->
+
+        <section class="statistik">
+          <div class="angka-statistik">
+            <span class="total">0</span>
+            <span class="label">TOTAL</span>
+          </div>
+
+          <hr />
+          <!--pemisah-->
+
+          <div class="angka-statistik">
+            <span class="selesai">0</span>
+            <span class="label">SELESAI</span>
+          </div>
+
+          <hr />
+          <!--pemisah-->
+
+          <div class="angka-statistik">
+            <span class="nunda-terusss">0</span>
+            <span class="label">BELUM SELESAI</span>
+          </div>
+        </section>
+
+        <section class="inputan">
+          <div class="formulir">
+            <input
+              type="text"
+              id="tugas"
+              placeholder="Ada tugas apa bro?!"
+              autocomplete="off"
+            />
+            <!--autocomplete tuh biar ga ada saran ketikan-->
+
+            <select class="formulir">
+              <option value="NO TUNDA-TUNDA!">URGENT</option>
+              <option value="BURUAN!">HIGH</option>
+              <option value="IYA DIKERJAIN">MEDIUM</option>
+            </select>
+
+            <button id="btnTambah" class="btnSuccess">Tambah</button>
+          </div>
+        </section>
+
+        <section class="list-nya">
+          <div class="judul-filter">
+            <h3>DAFTAR TUGAS</h3>
+            <div class="btnList">
+              <button id="btnAll">Total</button>
+              <button id="btnAktif">Selesai</button>
+              <button id="btnDone">Belum Selesai</button>
+            </div>
+          </div>
+
+          <ul id="listTugas">
+            <!-- Elemen li akan ditambahkan secara dinamis via JavaScript -->
+          </ul>
+
+          <h6>YEAY! FREE TIME</h6>
+          <p id="takde-tugas" class="pesanKosong">
+            Kalau bisa, jangan ditambahin please😭🙏
+          </p>
+        </section>
+      </main>
+
+      <footer class="part-akhir">
+        <p>
+          &copy; 2026 GRACE VALENTINE. Pemrograman Internet — JavaScript DOM
+        </p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <!--hubungin ke js-nya-->
+  </body>
+</html>
