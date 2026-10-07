@@ -64,7 +64,7 @@ function tambahTugas() {
 
   // Percabangan: Ngecek kalau user cuma klik tambah tapi belum ngetik apa-apa (string kosong)
   if (isiTeks === "") {
-    alert("Deskripsi Singkat Tugas Harus Diisi yaa!", <br>, "~grace"); // Munculkan pop-up peringatan di atas browser
+    alert("Deskripsi Singkat Tugas Harus Diisi yaa!"); // Munculkan pop-up peringatan di atas browser
     return; // Stop fungsi di sini
   }
 
