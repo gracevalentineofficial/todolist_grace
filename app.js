@@ -1,5 +1,6 @@
 // 1. TANGKAP ELEMEN DOM (jembatan)
 // Ngebuat variabel dengan mencari id elemen HTML
+const nama = document.getElementById("nama");
 const todoInput = document.getElementById("tugas"); // Menangkap kotak tempat masukin tugas baru
 const btnAdd = document.getElementById("btnTambah"); // Menangkap tombol hijau "Tambah"
 const todoList = document.getElementById("listTugas"); // Menangkap area list
@@ -29,6 +30,7 @@ let totalTugas = 0; // buat hitung semua tugas
 let tugasSelesai = 0; // buat hitung tugas yang sudah dicentang
 
 
+
 // 3. FUNGSI UNTUK MEMPERBARUI ANGKA STATISTIK & PESAN KOSONG
 function perbaruiStatistik() {
   statTotal.innerText = totalTugas; // Ganti teks angka di layar browser dengan isi dari variabel totalTugas
@@ -51,6 +53,7 @@ function perbaruiStatistik() {
 perbaruiStatistik();
 
 
+
 // 4. FUNGSI UTAMA UNTUK MERAKIT DAN MENAMBAHKAN TUGAS BARU
 function tambahTugas() {
   const isiTeks = todoInput.value.trim(); // Ambil ketikan dari kotak input (.value), lalu bersihkan spasi kosong berlebih (.trim)
@@ -61,7 +64,7 @@ function tambahTugas() {
 
   // Percabangan: Ngecek kalau user cuma klik tambah tapi belum ngetik apa-apa (string kosong)
   if (isiTeks === "") {
-    alert("Tugas tidak boleh kosong, silakan ketik sesuatu!"); // Munculkan pop-up peringatan di atas browser
+    alert("Deskripsi Singkat Tugas Harus Diisi yaa!", <br>, "~grace"); // Munculkan pop-up peringatan di atas browser
     return; // Stop fungsi di sini
   }
 
@@ -82,7 +85,7 @@ function tambahTugas() {
     </div>
 
     <!-- Elemen button buat hapus list -->
-    <button class="btn-delete" style="cursor: pointer; background-color: #e74c3c; color: white; border: none; padding: 6px 12px; border-radius: 6px; font-weight: bold; transition: 0.2s;">Hapus</button>
+    <button class="btn-delete">Hapus</button>
   `;
 
   // --- BAGIAN CHECKBOX ---
